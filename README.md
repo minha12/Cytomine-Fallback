@@ -4,6 +4,8 @@
 
 This repository contains the code and resources for the Cytomine Fallback project. The project is designed to provide a service allowing users to log in using LS Login and access the Cytomine service for collaborative analysis of very large bio-medical images. Once authorized, users can launch a Cytomine instance on Kubernetes or a VM, integrating with backend systems like the Bigpicture archive.
 
+![architecture](./assets/architecture.png)
+
 ## Features
 
 - **LS Login & Keycloak Integration:** Users sign in using their home organisation credentials, community identities, or social accounts (e.g., Google, LinkedIn). Keycloak integration enables Single Sign-On (SSO) capabilities for a streamlined authentication process across services.
