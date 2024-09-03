@@ -8,7 +8,7 @@ This repository contains the code and resources for the Cytomine Fallback projec
 
 - **LS Login & Keycloak Integration:** Users sign in using their home organisation credentials, community identities, or social accounts (e.g., Google, LinkedIn). Keycloak integration enables Single Sign-On (SSO) capabilities for a streamlined authentication process across services.
 - **On-Demand Cytomine Service:** Enables users to launch an instance of Cytomine on a Kubernetes namespace or as an alternative on a VM.
-- **Dataset Handling:** Efficient storage and management of a non-sensitive mock dataset.
+- **Dataset Handling:** Storage and sensitive data management (prototype phase: non-sensitive mock dataset).
 - **Filesystem Wrapper:** An interface for the Bigpicture archive that is potentially compatible with existing tools like sda-download or CSC Data Gateway.
 
 ## Getting Started
