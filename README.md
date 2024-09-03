@@ -2,44 +2,49 @@
 
 ## Overview
 
-This repository contains the code and resources for the Cytomine Fallback project. The project aims to deliver a service where users can log in using LS Login and access the Cytomine service. Once authorized, users can launch a Cytomine instance on Kubernetes to perform collaborative analysis of very large bio-medical images. Our service integrates with backend systems such as the Bigpicture archive.
+This repository contains the code and resources for the Cytomine Fallback project. The project is designed to provide a service allowing users to log in using LS Login and access the Cytomine service for collaborative analysis of very large bio-medical images. Once authorized, users can launch a Cytomine instance on Kubernetes or a VM, integrating with backend systems like the Bigpicture archive.
 
 ## Features
 
-- **LS Login Integration:** Allows users to sign in using home organisation credentials, community identities, or social accounts (e.g., Google, LinkedIn).
-- **Cytomine Service:** Facilitates the on-demand launching of a Cytomine instance on a Kubernetes namespace or a VM as an alternative.
-- **Dataset Handling:** Uses a non-sensitive mock dataset, stored and managed efficiently.
-- **Filesystem Wrapper:** Provides an interface for the Bigpicture archive, potentially compatible with existing tools like sda-download or CSC Data Gateway.
+- **LS Login & Keycloak Integration:** Users sign in using their home organisation credentials, community identities, or social accounts (e.g., Google, LinkedIn). Keycloak integration enables Single Sign-On (SSO) capabilities for a streamlined authentication process across services.
+- **On-Demand Cytomine Service:** Enables users to launch an instance of Cytomine on a Kubernetes namespace or as an alternative on a VM.
+- **Dataset Handling:** Efficient storage and management of a non-sensitive mock dataset.
+- **Filesystem Wrapper:** An interface for the Bigpicture archive that is potentially compatible with existing tools like sda-download or CSC Data Gateway.
 
 ## Getting Started
 
-1. Ensure you have Kubernetes or VM infrastructure ready for deploying the Cytomine application.
-2. Set up your environment according to the requirements specified in the `environment.md` file.
-3. Follow the installation instructions laid out in the `installation.md` to configure and deploy the Cytomine service.
+1. Prepare your Kubernetes cluster or VM infrastructure for deploying the Cytomine application.
+2. Review the `xxx.md` file to set up your environment according to the specified requirements.
+3. Consult the `yyy.md` file for instructions on how to configure and deploy the Cytomine service.
 
 ## Usage
 
-Once set up, users can:
+After setup:
 
-1. Log in through the user page using the LS Login method.
-2. Initiate the Cytomine service through a simple selection process.
-3. Conduct collaborative image analysis and annotations with an easy-to-use interface.
-4. Leverage machine learning algorithms for semi-automatic image processing.
+1. Users log in through the user page utilizing the LS Login method, with SSO provided by Keycloak.
+2. They start the Cytomine service through a straightforward selection process.
+3. Users can collaboratively analyze and annotate images with an intuitive interface.
+4. There is the ability to use machine learning algorithms for semi-automatic image processing.
 
 ## Dependencies
 
-- Kubernetes/VM platform
+- Kubernetes/VM infrastructure
 - LS Login service
-- Bigpicture archive or a mock version for non-sensitive data
-- Sensitive Data Archive (SDA) tools for data management (if real dataset is to be used)
+- Integration with Keycloak for SSO
+- Bigpicture archive or a mock version for non-sensitive data handling
+- Sensitive Data Archive (SDA) tools for data management (applicable when using real datasets)
 
 ## Security
 
-The service uses LS Login for secure authentication and ensures that user credentials are handled according to best practices to maintain the integrity and confidentiality of sensitive data.
+The service leverages LS Login and Keycloak for secure authentication, ensuring that user credentials are managed according to industry best practices, maintaining data integrity and confidentiality.
 
-## Contributing
+## Reporting Issues and Contributing
 
-Contributions are welcome. Please submit a pull request or raise an issue for any bugs, feature requests, or enhancements.
+If you encounter any issues or would like to propose new features or enhancements, please create an issue in the repository. We also welcome contributions via pull requests after discussion through raised issues. For detailed instructions on how to contribute, please see the `CONTRIBUTING.md` file.
+
+## Keycloak Integration with LS Login
+
+Keycloak has been integrated with LS Login within our service to ensure seamless SSO capability across multiple related services. Once a user is authenticated via Keycloak, they are granted access without additional logins. Moreover, Keycloak facilitates single sign-out, allowing users to log out from all sessions across services integrated with Keycloak with a single action.
 
 ## Contact
 
